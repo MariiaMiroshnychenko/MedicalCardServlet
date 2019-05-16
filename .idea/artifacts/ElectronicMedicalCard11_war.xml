@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ElectronicMedicalCard11:war">
+    <output-path>$PROJECT_DIR$/../ElectronicMedicalCard11/target</output-path>
+    <root id="archive" name="ElectronicMedicalCard-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ElectronicMedicalCard11:war exploded" />
+    </root>
+  </artifact>
+</component>

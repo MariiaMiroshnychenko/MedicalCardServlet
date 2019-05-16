@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>card.controller.servlet.PatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DoctorServlet</servlet-name>
+        <servlet-class>card.controller.servlet.DoctorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DoctorServlet</servlet-name>
+        <url-pattern>/doctor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PatientDoctorServlet</servlet-name>
+        <servlet-class>card.controller.servlet.PatientDoctorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PatientDoctorServlet</servlet-name>
+        <url-pattern>/link</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VisitServlet</servlet-name>
+        <servlet-class>card.controller.servlet.VisitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitServlet</servlet-name>
+        <url-pattern>/visit</url-pattern>
+    </servlet-mapping>
+</web-app>
