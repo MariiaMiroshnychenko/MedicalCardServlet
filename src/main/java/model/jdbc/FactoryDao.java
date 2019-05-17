@@ -1,7 +1,6 @@
 package model.jdbc;
 
 import model.jdbc.dao.DoctorJdbcDao;
-import model.jdbc.dao.PatientDoctorJdbcDao;
 import model.jdbc.dao.PatientJdbcDao;
 import model.jdbc.dao.VisitJdbcDao;
 
@@ -12,7 +11,6 @@ public abstract class FactoryDao {
 
     public abstract PatientJdbcDao getPatientJdbcDao();
     public abstract DoctorJdbcDao getDoctorJdbcDao();
-    public abstract PatientDoctorJdbcDao getPatientDoctorJdbcDao();
     public abstract VisitJdbcDao getVisitJdbcDao();
 
     public static FactoryDao getInstance() {

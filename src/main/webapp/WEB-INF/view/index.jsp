@@ -35,6 +35,7 @@
         <th>Ім'я</th>
         <th>По-батькові</th>
         <th>ID мед карти</th>
+        <th>ID лікаря</th>
     </tr>
     </thead>
     <c:forEach var="patients" items="${requestScope.patients}">
@@ -44,7 +45,8 @@
             <th><c:out value="${patients.surname}"/></th>
             <th><c:out value="${patients.firstName}"/></th>
             <th><c:out value="${patients.secondName}"/></th>
-            <th><c:out value="${patients.medicalCardId}"/></th>
+            <th><c:out value="${patients.medCardId}"/></th>
+            <th><c:out value="${patients.doctorId}"/></th>
         </tr>
         </tbody>
     </c:forEach>

@@ -8,24 +8,20 @@ public class Patient {
     private String surname;
     private String firstName;
     private String secondName;
-    private int medicalCardId;
+    private int medCardId;
+    private int doctorId;
 
+    private Doctor doctor;
     private List<Visit> visits = new ArrayList<>();
 
-    public Patient(int patientId, String surname, String firstName, String secondName, int medicalCardId) {
+    public Patient(int patientId, String surname, String firstName, String secondName, int medCardId, int doctorId, Doctor doctor, List<Visit> visits) {
         this.patientId = patientId;
         this.surname = surname;
         this.firstName = firstName;
         this.secondName = secondName;
-        this.medicalCardId = medicalCardId;
-    }
-
-    public Patient(int patientId, String surname, String firstName, String secondName, int medicalCardId, List<Visit> visits) {
-        this.patientId = patientId;
-        this.surname = surname;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.medicalCardId = medicalCardId;
+        this.medCardId = medCardId;
+        this.doctorId = doctorId;
+        this.doctor = doctor;
         this.visits = visits;
     }
 
@@ -64,12 +60,28 @@ public class Patient {
         this.secondName = secondName;
     }
 
-    public int getMedicalCardId() {
-        return medicalCardId;
+    public int getMedCardId() {
+        return medCardId;
     }
 
-    public void setMedicalCardId(int medicalCardId) {
-        this.medicalCardId = medicalCardId;
+    public void setMedCardId(int medCardId) {
+        this.medCardId = medCardId;
+    }
+
+    public int getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     public List<Visit> getVisits() {

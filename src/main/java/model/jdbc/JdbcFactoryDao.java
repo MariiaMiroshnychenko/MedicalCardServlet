@@ -1,7 +1,6 @@
 package model.jdbc;
 
 import model.jdbc.dao.DoctorJdbcDao;
-import model.jdbc.dao.PatientDoctorJdbcDao;
 import model.jdbc.dao.PatientJdbcDao;
 import model.jdbc.dao.VisitJdbcDao;
 
@@ -18,11 +17,6 @@ public class JdbcFactoryDao extends FactoryDao {
     @Override
     public DoctorJdbcDao getDoctorJdbcDao() {
         return new DoctorJdbcDao(getConnection());
-    }
-
-    @Override
-    public PatientDoctorJdbcDao getPatientDoctorJdbcDao() {
-        return new PatientDoctorJdbcDao(getConnection());
     }
 
     @Override

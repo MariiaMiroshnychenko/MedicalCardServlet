@@ -1,8 +1,6 @@
 package model.entity;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Visit {
     private int visitId;
@@ -18,13 +16,6 @@ public class Visit {
         this.medicalCardId = medicalCardId;
         this.diagnosis = diagnosis;
         this.patient = patient;
-    }
-
-    public Visit(int id, Date visitDate, int medicalCardId, String diagnosis) {
-        this.visitId = id;
-        this.visitDate = visitDate;
-        this.medicalCardId = medicalCardId;
-        this.diagnosis = diagnosis;
     }
 
     public Visit() {

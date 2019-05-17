@@ -11,9 +11,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class DoctorServlet extends EntityServlet implements PagesConstant {
-
-    List<Doctor> entitiesList = getAllEntities();
-
     public List<Doctor> getAllEntities() {
         return JdbcFactoryDao.getInstance().getDoctorJdbcDao().getAll();
     }

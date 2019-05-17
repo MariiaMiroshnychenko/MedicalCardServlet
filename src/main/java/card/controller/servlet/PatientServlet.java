@@ -1,7 +1,6 @@
 package card.controller.servlet;
 
 import model.entity.Patient;
-import model.entity.Visit;
 import model.jdbc.JdbcFactoryDao;
 import view.PagesConstant;
 
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 public class PatientServlet extends EntityServlet implements PagesConstant {
 //    List<Patient> entitiesList = getAllEntities();

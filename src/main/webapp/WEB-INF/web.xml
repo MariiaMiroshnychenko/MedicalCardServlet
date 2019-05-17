@@ -23,20 +23,20 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PatientDoctorServlet</servlet-name>
-        <servlet-class>card.controller.servlet.PatientDoctorServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PatientDoctorServlet</servlet-name>
-        <url-pattern>/link</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>VisitServlet</servlet-name>
         <servlet-class>card.controller.servlet.VisitServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>VisitServlet</servlet-name>
         <url-pattern>/visit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MedCardServlet</servlet-name>
+        <servlet-class>card.controller.servlet.MedCardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MedCardServlet</servlet-name>
+        <url-pattern>/medcards</url-pattern>
     </servlet-mapping>
 </web-app>
