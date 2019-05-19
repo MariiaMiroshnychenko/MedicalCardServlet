@@ -94,7 +94,7 @@
     </c:forEach>
 </table>
 <hr/>
-<form action="medcards">
+<form action="medcards" target="_blank">
     <button type="submit">Сформувати медичні карти</button>
 </form>
 </body>
