@@ -1,4 +1,4 @@
-package model.jdbc.dao.extention;
+package model.jdbc.dao.extension;
 
 import model.entity.Doctor;
 import model.jdbc.dao.EntityJdbcDao;

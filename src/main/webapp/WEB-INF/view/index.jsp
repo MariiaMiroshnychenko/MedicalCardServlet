@@ -24,8 +24,8 @@
 
 </head>
 <body>
-<h1><p align="center">Список пацієнтів</p></h1>
-<table style="border: 1px solid grey">
+<h2 align="center">Список пацієнтів</h2>
+<table align="center" style="border: 1px solid grey">
     <thead>
     <tr>
         <th>ID пацієнта</th>
@@ -39,19 +39,18 @@
     <c:forEach var="patient" items="${requestScope.patients}">
         <tbody>
         <tr>
-            <th><c:out value="${patient.patientId}"/></th>
-            <th><c:out value="${patient.surname}"/></th>
-            <th><c:out value="${patient.firstName}"/></th>
-            <th><c:out value="${patient.secondName}"/></th>
-            <th><c:out value="${patient.medCardId}"/></th>
-            <th><c:out value="${patient.doctorId}"/></th>
+            <td><c:out value="${patient.patientId}"/></td>
+            <td><c:out value="${patient.surname}"/></td>
+            <td><c:out value="${patient.firstName}"/></td>
+            <td><c:out value="${patient.secondName}"/></td>
+            <td><c:out value="${patient.medCardId}"/></td>
+            <td><c:out value="${patient.doctorId}"/></td>
         </tr>
         </tbody>
     </c:forEach>
 </table>
-<hr/>
-<h1 align="center">Список лікарів</h1>
-<table style="border: 1px solid grey">
+<hr/><h2 align="center">Список лікарів</h2>
+<table align="center" style="border: 1px solid grey">
     <thead>
     <tr>
         <th>ID лікаря</th>
@@ -63,17 +62,17 @@
     <c:forEach var="doctors" items="${requestScope.doctors}">
         <tbody>
         <tr>
-            <th><c:out value="${doctors.doctorId}"/></th>
-            <th><c:out value="${doctors.doctorSurname}"/></th>
-            <th><c:out value="${doctors.doctorFirstName}"/></th>
-            <th><c:out value="${doctors.doctorSecondName}"/></th>
+            <td><c:out value="${doctors.doctorId}"/></td>
+            <td><c:out value="${doctors.doctorSurname}"/></td>
+            <td><c:out value="${doctors.doctorFirstName}"/></td>
+            <td><c:out value="${doctors.doctorSecondName}"/></td>
         </tr>
         </tbody>
     </c:forEach>
 </table>
 <hr/>
-<h1 align="center">Візити</h1>
-<table style="border: 1px solid grey">
+<h2 align="center">Візити</h2>
+<table align="center" style="border: 1px solid grey">
     <thead>
     <tr>
         <th>№</th>
@@ -85,17 +84,19 @@
     <c:forEach var="visits" items="${requestScope.visits}">
         <tbody>
         <tr>
-            <th><c:out value="${visits.visitId}"/></th>
-            <th><c:out value="${visits.visitDate}"/></th>
-            <th><c:out value="${visits.medicalCardId}"/></th>
-            <th><c:out value="${visits.diagnosis}"/></th>
+            <td><c:out value="${visits.visitId}"/></td>
+            <td><c:out value="${visits.visitDate}"/></td>
+            <td><c:out value="${visits.medicalCardId}"/></td>
+            <td><c:out value="${visits.diagnosis}"/></td>
         </tr>
         </tbody>
     </c:forEach>
 </table>
 <hr/>
-<form action="medcards" target="_blank">
-    <button type="submit">Сформувати медичні карти</button>
-</form>
+<div align="center" >
+    <form action="medcards">
+        <button type="submit">Сформувати медичні карти</button>
+    </form>
+</div>
 </body>
 </html>

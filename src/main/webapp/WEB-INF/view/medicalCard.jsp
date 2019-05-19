@@ -72,6 +72,5 @@
         </tbody>
     </c:forEach>
 </table>
-<hr/>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package model.jdbc.dao.extention;
+package model.jdbc.dao.extension;
 
 import model.entity.Patient;
 import model.jdbc.dao.EntityJdbcDao;
@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PatientJdbcDao extends EntityJdbcDao implements QueryConstants {
+public class PatientJdbcDao extends EntityJdbcDao<Patient> implements QueryConstants {
     PatientJdbcDao(Connection connection) {
         super(connection);
     }
@@ -19,7 +19,7 @@ public class PatientJdbcDao extends EntityJdbcDao implements QueryConstants {
     }
 
     @Override
-    public Object extractEntityData(ResultSet results) {
+    public Patient extractEntityData(ResultSet results) {
         Patient patient = new Patient();
 
         try {

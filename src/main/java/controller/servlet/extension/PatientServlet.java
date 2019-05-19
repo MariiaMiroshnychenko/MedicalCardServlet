@@ -1,10 +1,10 @@
-package controller.servlet.extention;
+package controller.servlet.extension;
 
 import controller.servlet.EntityServlet;
 import model.entity.Doctor;
 import model.entity.Patient;
 import model.entity.Visit;
-import model.jdbc.dao.extention.JdbcFactoryDao;
+import model.jdbc.dao.extension.JdbcFactoryDao;
 import view.PagesConstant;
 
 import javax.servlet.ServletException;

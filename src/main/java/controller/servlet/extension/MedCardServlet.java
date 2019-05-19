@@ -1,7 +1,7 @@
-package controller.servlet.extention;
+package controller.servlet.extension;
 
 import controller.servlet.EntityServlet;
-import model.services.implementation.CreateMedicalCard;
+import model.services.implementation.AvailableMedCards;
 import model.MedicalCard;
 import view.PagesConstant;
 
@@ -14,9 +14,9 @@ import java.util.List;
 public class MedCardServlet extends EntityServlet implements PagesConstant {
     @Override
     public void setServletAttribute(HttpServletRequest req) {
-        CreateMedicalCard createMedicalCard = new CreateMedicalCard();
+        AvailableMedCards createMedicalCard = new AvailableMedCards();
 
-        List<MedicalCard> medcards = createMedicalCard.create();
+        List<MedicalCard> medcards = createMedicalCard.createCard();
 
         req.setAttribute("medcards", medcards);
     }

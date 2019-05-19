@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>PatientServlet</servlet-name>
-        <servlet-class>controller.servlet.extention.PatientServlet</servlet-class>
+        <servlet-class>controller.servlet.extension.PatientServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PatientServlet</servlet-name>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>MedCardServlet</servlet-name>
-        <servlet-class>controller.servlet.extention.MedCardServlet</servlet-class>
+        <servlet-class>controller.servlet.extension.MedCardServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MedCardServlet</servlet-name>

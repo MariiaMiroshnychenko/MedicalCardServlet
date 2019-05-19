@@ -1,5 +1,6 @@
-package model.jdbc.dao.extention;
+package model.jdbc.dao.extension;
 
+import model.jdbc.dao.EntityJdbcDao;
 import model.jdbc.dao.FactoryDao;
 
 import java.sql.Connection;
@@ -18,7 +19,7 @@ public class JdbcFactoryDao extends FactoryDao {
     }
 
     @Override
-    public VisitJdbcDao getVisitJdbcDao() {
+    public EntityJdbcDao getVisitJdbcDao() {
         return new VisitJdbcDao(getConnection());
     }
 
