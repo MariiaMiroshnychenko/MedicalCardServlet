@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<h1><p align="center">Медичні картки</p></h1>
+<h1>Медичні картки</h1>
 
 <table style="border: 1px solid grey">
     <thead>
@@ -26,7 +26,7 @@
 
     <th colspan="3">Пацієнт</th>
     <th colspan="3">Лікар</th>
-    <th colspan="3">Дані візитів</th>
+    <th colspan="2">Дані візитів</th>
 
     <tr>
         <th>№</th>
@@ -39,35 +39,36 @@
         <th>Ім'я</th>
         <th>По-батькові</th>
 
-        <th>Візит</th>
+        <th>Дата візиту</th>
+        <th>Діагноз</th>
     </tr>
 
     </thead>
 
-    <c:forEach var="medcards" items="${requestScope.medcards}">
+    <c:forEach var="medcard" items="${requestScope.medcards}">
         <tbody>
         <tr>
-            <td><c:out value="${medcards.patient.medCardId}"/></td>
+            <td><c:out value="${medcard.patient.medCardId}"/></td>
 
-            <td><c:out value="${medcards.patient.surname}"/></td>
-            <td><c:out value="${medcards.patient.firstName}"/></td>
-            <td><c:out value="${medcards.patient.secondName}"/></td>
+            <td><c:out value="${medcard.patient.surname}"/></td>
+            <td><c:out value="${medcard.patient.firstName}"/></td>
+            <td><c:out value="${medcard.patient.secondName}"/></td>
 
-            <td><c:out value="${medcards.doctor.doctorSurname}"/></td>
-            <td><c:out value="${medcards.doctor.doctorFirstName}"/></td>
-            <td><c:out value="${medcards.doctor.doctorSecondName}"/></td>
+            <td><c:out value="${medcard.doctor.doctorSurname}"/></td>
+            <td><c:out value="${medcard.doctor.doctorFirstName}"/></td>
+            <td><c:out value="${medcard.doctor.doctorSecondName}"/></td>
 
-            <%--<td><c:forEach var="visits" items="${requestScope.medcards}">--%>
-                <%--<c:out value="${medcards.visits}"/>--%>
-        <%--<c:forEach var="visit" items="${requestScope.medcards.visits}">--%>
-            <%--<c:out value="${medcards.visits.visit.diagnosis}"/>--%>
-        <%--</c:forEach>--%>
-            <%--</c:forEach>--%>
-            <%--</td>--%>
+            <td>
+                <c:forEach var="visit" items="${medcard.visits}">
+                    <c:out value="${visit.visitDate}"/><br/>
+                </c:forEach>
+            </td>
 
-                <%--<c:forEach var="visits" items="${requestScope.medcards}">--%>
-                <%--</c:forEach>--%>
-        </tr>
+            <td>
+                <c:forEach var="visit" items="${medcard.visits}">
+                    <c:out value="${visit.diagnosis}"/><br/>
+                </c:forEach>
+            </td>
         </tbody>
     </c:forEach>
 </table>

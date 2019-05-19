@@ -8,7 +8,8 @@ import java.io.IOException;
 
 public abstract class EntityServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF8");
 
@@ -17,8 +18,10 @@ public abstract class EntityServlet extends HttpServlet {
         setServletDispatcher(req, resp);
     }
 
-    public abstract void setServletDispatcher(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException;
+    public abstract void setServletDispatcher(HttpServletRequest req, HttpServletResponse resp)
+                  throws ServletException, IOException;
 
     public abstract void setServletAttribute(HttpServletRequest req);
+
 }
 

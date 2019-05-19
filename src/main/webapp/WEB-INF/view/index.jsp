@@ -38,19 +38,65 @@
         <th>ID лікаря</th>
     </tr>
     </thead>
-    <c:forEach var="patients" items="${requestScope.patients}">
+    <c:forEach var="patient" items="${requestScope.patients}">
         <tbody>
         <tr>
-            <th><c:out value="${patients.patientId}"/></th>
-            <th><c:out value="${patients.surname}"/></th>
-            <th><c:out value="${patients.firstName}"/></th>
-            <th><c:out value="${patients.secondName}"/></th>
-            <th><c:out value="${patients.medCardId}"/></th>
-            <th><c:out value="${patients.doctorId}"/></th>
+            <th><c:out value="${patient.patientId}"/></th>
+            <th><c:out value="${patient.surname}"/></th>
+            <th><c:out value="${patient.firstName}"/></th>
+            <th><c:out value="${patient.secondName}"/></th>
+            <th><c:out value="${patient.medCardId}"/></th>
+            <th><c:out value="${patient.doctorId}"/></th>
         </tr>
         </tbody>
     </c:forEach>
 </table>
 <hr/>
+
+<h1 align="center">Список лікарів</h1>
+<table style="border: 1px solid grey">
+    <thead>
+    <tr>
+        <th>ID лікаря</th>
+        <th>Прізвище</th>
+        <th>Ім'я</th>
+        <th>По-батькові</th>
+    </tr>
+    </thead>
+    <c:forEach var="doctors" items="${requestScope.doctors}">
+        <tbody>
+        <tr>
+            <th><c:out value="${doctors.doctorId}"/></th>
+            <th><c:out value="${doctors.doctorSurname}"/></th>
+            <th><c:out value="${doctors.doctorFirstName}"/></th>
+            <th><c:out value="${doctors.doctorSecondName}"/></th>
+        </tr>
+        </tbody>
+    </c:forEach>
+</table>
+<hr/>
+
+<h1 align="center">Візити</h1>
+<table style="border: 1px solid grey">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Дата візиту</th>
+        <th>ID медичної карти</th>
+        <th>Діагноз</th>
+    </tr>
+    </thead>
+    <c:forEach var="visits" items="${requestScope.visits}">
+        <tbody>
+        <tr>
+            <th><c:out value="${visits.visitId}"/></th>
+            <th><c:out value="${visits.visitDate}"/></th>
+            <th><c:out value="${visits.medicalCardId}"/></th>
+            <th><c:out value="${visits.diagnosis}"/></th>
+        </tr>
+        </tbody>
+    </c:forEach>
+</table>
+
 </body>
 </html>

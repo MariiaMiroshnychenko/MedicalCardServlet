@@ -1,8 +1,6 @@
-package model.jdbc;
+package model.jdbc.dao.extention;
 
-import model.jdbc.dao.DoctorJdbcDao;
-import model.jdbc.dao.PatientJdbcDao;
-import model.jdbc.dao.VisitJdbcDao;
+import model.jdbc.dao.FactoryDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,18 +22,16 @@ public class JdbcFactoryDao extends FactoryDao {
         return new VisitJdbcDao(getConnection());
     }
 
-
-    Connection getConnection() {
-        Connection connection = null;
-
+    private Connection getConnection() {
         try {
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/medical_information_system?useSSL=false&serverTimezone=UTC", "root", "root");
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+            return DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/medical_information_system?" +
+                                                    "serverTimezone=UTC",
+                    "root",
+                    "root");
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return connection;
     }
-
-
 }

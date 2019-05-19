@@ -1,8 +1,8 @@
-package model.jdbc;
+package model.jdbc.dao;
 
-import model.jdbc.dao.DoctorJdbcDao;
-import model.jdbc.dao.PatientJdbcDao;
-import model.jdbc.dao.VisitJdbcDao;
+import model.jdbc.dao.extention.DoctorJdbcDao;
+import model.jdbc.dao.extention.JdbcFactoryDao;
+import model.jdbc.dao.extention.PatientJdbcDao;
 
 import java.util.Optional;
 
@@ -11,7 +11,7 @@ public abstract class FactoryDao {
 
     public abstract PatientJdbcDao getPatientJdbcDao();
     public abstract DoctorJdbcDao getDoctorJdbcDao();
-    public abstract VisitJdbcDao getVisitJdbcDao();
+    public abstract EntityJdbcDao getVisitJdbcDao();
 
     public static FactoryDao getInstance() {
         if (!factory.isPresent()) {
