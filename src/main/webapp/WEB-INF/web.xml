@@ -14,24 +14,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>DoctorServlet</servlet-name>
-        <servlet-class>card.controller.servlet.DoctorServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DoctorServlet</servlet-name>
-        <url-pattern>/doctor</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>VisitServlet</servlet-name>
-        <servlet-class>card.controller.servlet.VisitServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>VisitServlet</servlet-name>
-        <url-pattern>/visit</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>MedCardServlet</servlet-name>
         <servlet-class>controller.servlet.extention.MedCardServlet</servlet-class>
     </servlet>
