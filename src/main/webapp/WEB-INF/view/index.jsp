@@ -24,9 +24,7 @@
 
 </head>
 <body>
-
 <h1><p align="center">Список пацієнтів</p></h1>
-
 <table style="border: 1px solid grey">
     <thead>
     <tr>
@@ -52,7 +50,6 @@
     </c:forEach>
 </table>
 <hr/>
-
 <h1 align="center">Список лікарів</h1>
 <table style="border: 1px solid grey">
     <thead>
@@ -75,7 +72,6 @@
     </c:forEach>
 </table>
 <hr/>
-
 <h1 align="center">Візити</h1>
 <table style="border: 1px solid grey">
     <thead>
@@ -97,6 +93,9 @@
         </tbody>
     </c:forEach>
 </table>
-
+<hr/>
+<form action="medcards">
+    <button type="submit">Сформувати медичні карти</button>
+</form>
 </body>
 </html>

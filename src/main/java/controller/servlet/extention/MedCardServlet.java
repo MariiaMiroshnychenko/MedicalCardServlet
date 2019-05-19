@@ -1,8 +1,8 @@
-package card.controller.servlet.extention;
+package controller.servlet.extention;
 
-import card.controller.servlet.EntityServlet;
+import controller.servlet.EntityServlet;
 import model.services.implementation.CreateMedicalCard;
-import model.entity.MedicalCard;
+import model.MedicalCard;
 import view.PagesConstant;
 
 import javax.servlet.ServletException;

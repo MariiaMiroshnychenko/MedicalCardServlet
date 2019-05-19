@@ -9,8 +9,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DoctorJdbcDao extends EntityJdbcDao<Doctor> implements QueryConstants {
-    public DoctorJdbcDao(Connection connection) {
+    DoctorJdbcDao(Connection connection) {
         super(connection);
+    }
+
+    @Override
+    public String getQuery() {
+        return SELECT_FROM_DOCTOR;
     }
 
     @Override
@@ -26,10 +31,5 @@ public class DoctorJdbcDao extends EntityJdbcDao<Doctor> implements QueryConstan
             e.printStackTrace();
         }
         return doctor;
-    }
-
-    @Override
-    public String getQuery() {
-        return SELECT_FROM_DOCTOR;
     }
 }

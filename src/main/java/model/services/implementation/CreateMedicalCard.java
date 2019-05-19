@@ -1,7 +1,7 @@
 package model.services.implementation;
 
 import model.entity.Doctor;
-import model.entity.MedicalCard;
+import model.MedicalCard;
 import model.entity.Patient;
 import model.entity.Visit;
 import model.jdbc.dao.extention.JdbcFactoryDao;

@@ -10,8 +10,13 @@ import java.sql.SQLException;
 
 
 public class VisitJdbcDao extends EntityJdbcDao<Visit> implements QueryConstants {
-    public VisitJdbcDao(Connection connection) {
+    VisitJdbcDao(Connection connection) {
         super(connection);
+    }
+
+    @Override
+    public String getQuery() {
+        return SELECT_FROM_VISIT;
     }
 
     @Override
@@ -28,10 +33,5 @@ public class VisitJdbcDao extends EntityJdbcDao<Visit> implements QueryConstants
         }
 
         return visit;
-    }
-
-    @Override
-    public String getQuery() {
-        return SELECT_FROM_VISIT;
     }
 }

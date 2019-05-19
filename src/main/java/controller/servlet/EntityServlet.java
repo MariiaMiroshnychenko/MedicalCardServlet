@@ -1,4 +1,4 @@
-package card.controller.servlet;
+package controller.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

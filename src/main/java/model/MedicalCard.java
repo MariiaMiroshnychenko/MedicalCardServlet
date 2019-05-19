@@ -1,4 +1,8 @@
-package model.entity;
+package model;
+
+import model.entity.Doctor;
+import model.entity.Patient;
+import model.entity.Visit;
 
 import java.util.List;
 

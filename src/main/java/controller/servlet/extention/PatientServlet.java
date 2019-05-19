@@ -1,6 +1,6 @@
-package card.controller.servlet.extention;
+package controller.servlet.extention;
 
-import card.controller.servlet.EntityServlet;
+import controller.servlet.EntityServlet;
 import model.entity.Doctor;
 import model.entity.Patient;
 import model.entity.Visit;
