@@ -22,6 +22,4 @@ public abstract class EntityServlet extends HttpServlet {
                   throws ServletException, IOException;
 
     public abstract void setServletAttribute(HttpServletRequest req);
-
 }
-

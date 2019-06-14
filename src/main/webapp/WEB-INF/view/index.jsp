@@ -94,7 +94,7 @@
 </table>
 <hr/>
 <div align="center" >
-    <form action="medcards">
+    <form action="medcards" target="_blank">
         <button type="submit">Сформувати медичні карти</button>
     </form>
 </div>

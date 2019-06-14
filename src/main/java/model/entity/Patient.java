@@ -1,95 +1,93 @@
 package model.entity;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Patient {
-    private int patientId;
-    private String surname;
-    private String firstName;
-    private String secondName;
-    private int medCardId;
-    private int doctorId;
+    private Integer id;
+    private PersonalRegData person;
+    private MedicalCard medicalCard;
+    private MedicalEmployee attendingDoctor;
+    private List<PatientVisit> patientVisits;
+    private List<Referral> referrals;
 
-    private Doctor doctor;
-    private List<Visit> visits = new ArrayList<>();
-
-    public Patient(int patientId, String surname, String firstName, String secondName, int medCardId, int doctorId, Doctor doctor, List<Visit> visits) {
-        this.patientId = patientId;
-        this.surname = surname;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.medCardId = medCardId;
-        this.doctorId = doctorId;
-        this.doctor = doctor;
-        this.visits = visits;
+    public Patient(Integer id, PersonalRegData person, MedicalCard medicalCard,
+                   MedicalEmployee attendingDoctor, List<PatientVisit> patientVisits,
+                   List<Referral> referrals) {
+        this.id = id;
+        this.person = person;
+        this.medicalCard = medicalCard;
+        this.attendingDoctor = attendingDoctor;
+        this.patientVisits = patientVisits;
+        this.referrals = referrals;
     }
 
     public Patient() {
     }
 
-    public int getPatientId() {
-        return patientId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getSurname() {
-        return surname;
+    public PersonalRegData getPerson() {
+        return person;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setPerson(PersonalRegData person) {
+        this.person = person;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public MedicalCard getMedicalCard() {
+        return medicalCard;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setMedicalCard(MedicalCard medicalCard) {
+        this.medicalCard = medicalCard;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public MedicalEmployee getAttendingDoctor() {
+        return attendingDoctor;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setAttendingDoctor(MedicalEmployee attendingDoctor) {
+        this.attendingDoctor = attendingDoctor;
     }
 
-    public int getMedCardId() {
-        return medCardId;
+    public List<PatientVisit> getPatientVisits() {
+        return patientVisits;
     }
 
-    public void setMedCardId(int medCardId) {
-        this.medCardId = medCardId;
+    public void setPatientVisits(List<PatientVisit> patientVisits) {
+        this.patientVisits = patientVisits;
     }
 
-    public int getDoctorId() {
-        return doctorId;
+    public List<Referral> getReferrals() {
+        return referrals;
     }
 
-    public void setDoctorId(int doctorId) {
-        this.doctorId = doctorId;
+    public void setReferrals(List<Referral> referrals) {
+        this.referrals = referrals;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Patient patient = (Patient) o;
+        return Objects.equals(id, patient.id) &&
+                Objects.equals(person, patient.person) &&
+                Objects.equals(medicalCard, patient.medicalCard) &&
+                Objects.equals(attendingDoctor, patient.attendingDoctor) &&
+                Objects.equals(patientVisits, patient.patientVisits) &&
+                Objects.equals(referrals, patient.referrals);
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
-
-    public List<Visit> getVisits() {
-        return visits;
-    }
-
-    public void setVisits(List<Visit> visits) {
-        this.visits = visits;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, person, medicalCard, attendingDoctor, patientVisits, referrals);
     }
 }
-

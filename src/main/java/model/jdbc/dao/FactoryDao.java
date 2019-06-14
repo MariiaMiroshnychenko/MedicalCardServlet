@@ -1,19 +1,21 @@
 package model.jdbc.dao;
 
-import model.entity.Doctor;
-import model.entity.Visit;
-import model.jdbc.dao.extension.DoctorJdbcDao;
-import model.jdbc.dao.extension.JdbcFactoryDao;
-import model.jdbc.dao.extension.PatientJdbcDao;
+import model.entity.*;
+import model.jdbc.dao.implementation.JdbcFactoryDao;
 
 import java.util.Optional;
 
 public abstract class FactoryDao {
     private static Optional<FactoryDao> factory = Optional.empty();
 
-    public abstract PatientJdbcDao getPatientJdbcDao();
-    public abstract DoctorJdbcDao getDoctorJdbcDao();
-    public abstract EntityJdbcDao<Visit> getVisitJdbcDao();
+    public abstract EntityJdbcDao<ExamResultByReferral> getExamResultByReferralJdbcDao();
+    public abstract EntityJdbcDao<MedicalCard> getMedicalCardJdbcDao();
+    public abstract EntityJdbcDao<MedicalEmployee> getMedicalEmployeeJdbcDao();
+    public abstract EntityJdbcDao<Patient> getPatientJdbcDao();
+    public abstract EntityJdbcDao<PatientVisit> getPatientVisitJdbcDao();
+    public abstract EntityJdbcDao<PersonalRegData> getPersonalRegDataJdbcDao();
+    public abstract EntityJdbcDao<Referral> getReferralJdbcDao();
+    public abstract EntityJdbcDao<Role> getRoleJdbcDao();
 
     public static FactoryDao getInstance() {
         if (!factory.isPresent()) {

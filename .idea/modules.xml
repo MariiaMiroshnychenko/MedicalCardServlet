@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ElectronicMedicalCard11.iml" filepath="$PROJECT_DIR$/ElectronicMedicalCard11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MedicalCardServlet.iml" filepath="$PROJECT_DIR$/MedicalCardServlet.iml" />
     </modules>
   </component>
 </project>
